@@ -7,6 +7,7 @@
 
 """RSS Torrent Download Client"""
 
+import feedparser
 import ConfigParser
 
 class RTDC(object):
@@ -23,3 +24,7 @@ class RTDC(object):
         torrent_dir = self.config.get('main', 'TorrentDir')
         print "Wohoo, running"
         print torrent_dir
+
+    def get_rss(self, rss_path):
+        """Load RSS-feed"""
+        self.feed = feedparser.parse(rss_path)

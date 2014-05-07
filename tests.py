@@ -29,6 +29,14 @@ class RTDCTests(unittest.TestCase):
     def test_main_run(self):
         self.rtdc.run()
 
+    def test_get_rss(self):
+        rss_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)),
+            'test.rss'
+        )
+        self.rtdc.get_rss(rss_path)
+        self.assertEqual(len(self.rtdc.feed.entries), 2)
+
     def tearDown(self):
         shutil.rmtree(self.torrent_dir)
         os.remove(self.config_file)

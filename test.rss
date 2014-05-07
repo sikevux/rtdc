@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>ExampleTorrents</title>
+		<link>http://www.example.com</link>
+		<description>example.com torrents</description>
+		<language>en</language>
+		<ttl>5</ttl>
+		<atom:link href="http://example.com/feed" rel="self" type="application/rss+xml" />
+		<item>
+			<title><![CDATA[debian 7.5.0 amd64 netinst.iso]]></title>
+			<pubDate>Wed, 07 May 2014 11:12:28 +0000</pubDate>
+			<category>Debian</category>
+			<guid>http://debian.org/guid/123456</guid>
+			<comments><![CDATA[http://debian.org/guid/123456#comments]]></comments>
+			<link><![CDATA[http://cdimage.debian.org/debian-cd/7.5.0/amd64/bt-cd/debian-7.5.0-amd64-netinst.iso.torrent]]></link>
+			<description><![CDATA[Category: Debian]]></description>
+		</item>
+		<item>
+			<title><![CDATA[Fedora 20 x86_64 DVD]]></title>
+			<pubDate>Wed, 07 May 2014 11:11:13 +0000</pubDate>
+			<category>Fedora</category>
+			<guid>http://fedoraproject.org/guid/123456</guid>
+			<comments><![CDATA[http://fedoraproject.org/guid/123456#comments]]></comments>
+			<link><![CDATA[http://torrent.fedoraproject.org/torrents/Fedora-20-x86_64-DVD.torrent]]></link>
+			<description><![CDATA[Category: Fedora]]></description>
+		</item>
+	</channel>
+</rss>
