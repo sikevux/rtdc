@@ -1,0 +1,3 @@
+[main]
+TorrentDir: /path/to/torrent/dir
+RSSFeed: http://example.com/feed
