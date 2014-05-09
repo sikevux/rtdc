@@ -35,3 +35,24 @@ class RTDC(object):
     def get_rss(self, rss_path):
         """Load RSS-feed"""
         self.feed = feedparser.parse(rss_path)
+
+    def get_hits(self):
+        """Get hits from when names in config matches titles in the feed"""
+        name_items = self.config.items('names')
+        result = []
+        for _, name in name_items:
+            result.extend([(r.title, r.link) for r in self.find_in_feed(name)])
+        return result
+
+    def find_in_feed(self, name):
+        """Search for a specific name in the feed"""
+        parts = name.lower().split(' ')
+        result = []
+        for entry in self.feed.entries:
+            matches = True
+            for part in parts:
+                if part not in entry.title:
+                    matches = False
+            if matches:
+                result.append(entry)
+        return result

@@ -5,7 +5,7 @@ pylint:
 	pylint --rcfile=.pylintrc rtdc
 
 nosetests:
-	nosetests -v --cover-erase --with-coverage --cover-min-percentage=85 \
+	nosetests -v --cover-erase --with-coverage --cover-min-percentage=90 \
 		--cover-package=rtdc
 
 test: pylint nosetests
