@@ -1,9 +1,11 @@
-from rtdc import RTDC
-
 import os
 import shutil
 import tempfile
+
 import unittest
+
+from rtdc import RTDC
+
 
 class RTDCTests(unittest.TestCase):
 
@@ -16,7 +18,6 @@ class RTDCTests(unittest.TestCase):
             "TorrentDir: " + self.torrent_dir + "\n" \
             "RSSFeed: http://example.com/feed\n"
 
-
         with open(self.config_file, 'w+') as config:
             config.write(fake_config)
 
@@ -24,7 +25,7 @@ class RTDCTests(unittest.TestCase):
 
     def test_config_load(self):
         self.assertEqual(self.rtdc.config.get('main', 'TorrentDir'),
-            self.torrent_dir)
+                         self.torrent_dir)
 
     def test_main_run(self):
         self.rtdc.run()

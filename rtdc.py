@@ -9,11 +9,13 @@
 
 from __future__ import print_function
 
-import feedparser
 try:
     import ConfigParser as configparser
 except ImportError:
     import configparser
+
+import feedparser
+
 
 class RTDC(object):
     """Master-class, combining all the work"""
