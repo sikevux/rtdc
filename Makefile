@@ -11,4 +11,4 @@ nosetests:
 test: pylint nosetests
 
 clean:
-	rm -f *.pyc
+	rm -rf *.pyc __pycache__
